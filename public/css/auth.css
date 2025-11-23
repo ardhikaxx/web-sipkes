@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #1D4ED8;
+    --light-bg: #f8f9fc;
+}
+
+.auth-bg {
+    background-color: #f0f2f7;
+}
+
+.auth-card {
+    width: 900px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.auth-left {
+    background-color: var(--light-bg);
+}
