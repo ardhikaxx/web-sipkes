@@ -94,7 +94,7 @@
         </div>
 
         <div class="sidebar-bottom p-3 mt-auto">
-            <button id="sidebarClose" class="btn btn-light w-100 d-flex align-items-center justify-content-center">
+            <button id="sidebarClose" class="btn btn-close-sidebar d-lg-none">
                 <i class="fas fa-chevron-left"></i>
             </button>
         </div>
@@ -149,5 +149,51 @@
 
     .sidebar .collapse .nav-link.active-sub {
         border-left: 2px solid #556cff;
+    }
+
+    .btn-close-sidebar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        transition: all 0.3s ease;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .btn-close-sidebar:hover {
+        background: #e9ecef;
+        color: #495057;
+    }
+
+    .btn-close-sidebar:active {
+        transform: scale(0.95);
+    }
+
+    .btn-close-sidebar i {
+        font-size: 1.1rem;
+        transition: transform 0.2s ease;
+    }
+
+    @media (min-width: 992px) {
+        .btn-close-sidebar {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .btn-close-sidebar {
+            width: 44px;
+            height: 44px;
+        }
+
+        .btn-close-sidebar i {
+            font-size: 1rem;
+        }
     }
 </style>
