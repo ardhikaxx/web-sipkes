@@ -26,6 +26,10 @@ Route::get('/pemeriksaan/poli-gigi', function () {
     return view('pemeriksaan.poli-gigi.index');
 });
 
+Route::get('/pemeriksaan/poli-gigi/pemeriksaan-poli-gigi', function () {
+    return view('pemeriksaan.poli-gigi.pemeriksaan-poli-gigi');
+});
+
 Route::get('/pemeriksaan/poli-kia', function () {
     return view('pemeriksaan.poli-kia.index');
 });
