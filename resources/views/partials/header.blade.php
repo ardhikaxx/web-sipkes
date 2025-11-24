@@ -6,12 +6,7 @@
             </button>
         </div>
 
-        <div class="header-actions d-flex align-items-center gap-3">
-            <button class="btn btn-link position-relative">
-                <i class="fas fa-bell"></i>
-                <span class="notif-dot"></span>
-            </button>
-
+        <div class="header-actions d-flex align-items-center">
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="userMenu"
                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -47,18 +42,6 @@
         padding: 0 1rem;
         margin: 0 auto;
         width: 100%;
-    }
-
-    .notif-dot {
-        position: absolute;
-        top: 6px;
-        right: 6px;
-        width: 8px;
-        height: 8px;
-        background: #3b82f6;
-        border-radius: 50%;
-        display: inline-block;
-        border: 2px solid #fff;
     }
 
     @media (max-width: 991.98px) {
