@@ -14,6 +14,10 @@ Route::get('/pendaftaran', function () {
     return view('pendaftaran.index');
 })->name('pendaftaran');
 
+Route::get('/pemeriksaan-awal', function () {
+    return view('pemeriksaan-awal.index');
+})->name('pemeriksaan-awal');
+
 Route::get('/pemeriksaan/poli-umum', function () {
     return view('pemeriksaan.poli-umum.index');
 });

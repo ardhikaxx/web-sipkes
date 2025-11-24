@@ -48,14 +48,12 @@
                         </div>
                     </div>
 
-                    <!-- Form Pendaftaran -->
                     <form action="#" method="POST">
                         @csrf
                         <h5 class="mb-3">Data Identitas Pasien</h5>
                         <p class="text-muted mb-4">Cari Data Pasien</p>
 
                         <div class="row g-3">
-                            <!-- Kolom Kiri -->
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="no_rm" class="form-label">No. RM</label>
@@ -105,7 +103,6 @@
                                 </div>
                             </div>
 
-                            <!-- Kolom Kanan -->
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="alamat_lengkap" class="form-label">Alamat Lengkap</label>
@@ -225,7 +222,6 @@
                             </div>
                         </div>
 
-                        <!-- Identitas Wali Pasien -->
                         <h5 class="mt-4 mb-3">Identitas Wali Pasien</h5>
                         <div class="row g-3">
                             <div class="col-md-4">
@@ -270,7 +266,6 @@
                             </div>
                         </div>
 
-                        <!-- Layanan, Dokter, Cara Pembayaran -->
                         <div class="row g-3">
                             <div class="col-md-4">
                                 <div class="mb-3">
@@ -302,7 +297,6 @@
                             </div>
                         </div>
 
-                        <!-- Tombol Simpan -->
                         <div class="text-end mt-4">
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
@@ -313,7 +307,6 @@
     </div>
 
     <script>
-        // JavaScript untuk stepper functionality
         document.addEventListener('DOMContentLoaded', function() {
             const stepperSteps = document.querySelectorAll('.stepper-step');
             
@@ -321,13 +314,11 @@
                 step.addEventListener('click', function() {
                     const stepNumber = this.getAttribute('data-step');
                     
-                    // Remove active class from all steps
                     stepperSteps.forEach(s => {
                         s.classList.remove('active');
                         s.querySelector('.stepper-step-button').classList.remove('active');
                     });
                     
-                    // Add active class to current step and all previous steps
                     for (let i = 1; i <= stepNumber; i++) {
                         const currentStep = document.querySelector(`[data-step="${i}"]`);
                         if (currentStep) {
