@@ -144,9 +144,7 @@
     }
 
     .sidebar .collapse .nav-link {
-        padding: .5rem .75rem;
-        font-size: 0.9rem;
-        margin-bottom: 0.1rem;
+        padding: .6rem 1rem;
     }
 
     .sidebar .collapse .nav-link.active-sub {

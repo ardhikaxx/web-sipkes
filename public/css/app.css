@@ -140,12 +140,8 @@ body {
     overflow-x: hidden;
 }
 
-/* Submenu styles */
 .sidebar .collapse .nav-link {
-    padding: .5rem .75rem;
-    font-size: 0.9rem;
-    margin-bottom: 0.1rem;
-    border-radius: 0.4rem;
+    padding: .6rem 1rem;
 }
 
 @media (max-width: 768px) {
