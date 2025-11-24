@@ -91,6 +91,7 @@
 .sidebar .sidebar-nav .nav-link.active-sub {
     color: var(--primary);
     font-weight: 600;
+    background: rgba(85, 108, 255, 0.08);
 }
 
 .sidebar .sidebar-nav .nav-link .caret {

@@ -11,27 +11,40 @@
                 <div class="card p-4 shadow-sm">
                     <h1 class="mb-4">Pendaftaran</h1>
 
-                    <!-- Step Progress -->
-                    <div class="step-progress mb-4">
-                        <div class="step active">
-                            <div class="step-number">1</div>
-                            <div class="step-label">Pendaftaran</div>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <div class="step-label">Pemeriksaan Awal</div>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <div class="step-label">Pemeriksaan</div>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">4</div>
-                            <div class="step-label">Farmasi</div>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">5</div>
-                            <div class="step-label">Pembayaran</div>
+                    <div class="stepper-wrapper mb-5">
+                        <div class="stepper" id="pendaftaranStepper">
+                            <ol class="stepper-steps">
+                                <li class="stepper-step active" data-step="1">
+                                    <button type="button" class="stepper-step-button active" data-bs-toggle="step">
+                                        <span class="stepper-step-indicator">1</span>
+                                        <span class="stepper-step-label">Pendaftaran</span>
+                                    </button>
+                                </li>
+                                <li class="stepper-step" data-step="2">
+                                    <button type="button" class="stepper-step-button" data-bs-toggle="step">
+                                        <span class="stepper-step-indicator">2</span>
+                                        <span class="stepper-step-label">Pemeriksaan Awal</span>
+                                    </button>
+                                </li>
+                                <li class="stepper-step" data-step="3">
+                                    <button type="button" class="stepper-step-button" data-bs-toggle="step">
+                                        <span class="stepper-step-indicator">3</span>
+                                        <span class="stepper-step-label">Pemeriksaan</span>
+                                    </button>
+                                </li>
+                                <li class="stepper-step" data-step="4">
+                                    <button type="button" class="stepper-step-button" data-bs-toggle="step">
+                                        <span class="stepper-step-indicator">4</span>
+                                        <span class="stepper-step-label">Farmasi</span>
+                                    </button>
+                                </li>
+                                <li class="stepper-step" data-step="5">
+                                    <button type="button" class="stepper-step-button" data-bs-toggle="step">
+                                        <span class="stepper-step-indicator">5</span>
+                                        <span class="stepper-step-label">Pembayaran</span>
+                                    </button>
+                                </li>
+                            </ol>
                         </div>
                     </div>
 
@@ -298,4 +311,32 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // JavaScript untuk stepper functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const stepperSteps = document.querySelectorAll('.stepper-step');
+            
+            stepperSteps.forEach(step => {
+                step.addEventListener('click', function() {
+                    const stepNumber = this.getAttribute('data-step');
+                    
+                    // Remove active class from all steps
+                    stepperSteps.forEach(s => {
+                        s.classList.remove('active');
+                        s.querySelector('.stepper-step-button').classList.remove('active');
+                    });
+                    
+                    // Add active class to current step and all previous steps
+                    for (let i = 1; i <= stepNumber; i++) {
+                        const currentStep = document.querySelector(`[data-step="${i}"]`);
+                        if (currentStep) {
+                            currentStep.classList.add('active');
+                            currentStep.querySelector('.stepper-step-button').classList.add('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

@@ -27,7 +27,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <script>
         (function() {
@@ -36,27 +35,22 @@
             const toggleBtn = document.getElementById('sidebarToggle');
             const closeBtn = document.getElementById('sidebarClose');
             
-            // Toggle sidebar
             toggleBtn.addEventListener('click', function() {
                 body.classList.toggle('sidebar-open');
             });
 
-            // Close sidebar
             closeBtn.addEventListener('click', function() {
                 body.classList.remove('sidebar-open');
             });
 
-            // Close sidebar when clicking outside on mobile
             document.addEventListener('click', function(e) {
                 if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
                     if (window.innerWidth < 992) body.classList.remove('sidebar-open');
                 }
             });
 
-            // Handle dropdown toggle with animation
             document.querySelectorAll('.sidebar .nav-link[data-bs-toggle="collapse"]').forEach(function(el) {
                 el.addEventListener('click', function(e) {
-                    // Only toggle if clicking the link itself, not the icon
                     if (e.target.tagName === 'I' && e.target.classList.contains('caret')) {
                         return;
                     }
@@ -64,10 +58,8 @@
                 });
             });
 
-            // Auto-close other dropdowns when one is opened (optional)
             document.querySelectorAll('.sidebar .collapse').forEach(function(collapse) {
                 collapse.addEventListener('show.bs.collapse', function() {
-                    // Remove show class from other collapses
                     document.querySelectorAll('.sidebar .collapse').forEach(function(otherCollapse) {
                         if (otherCollapse !== collapse && otherCollapse.classList.contains('show')) {
                             otherCollapse.classList.remove('show');
@@ -82,9 +74,7 @@
                 }
             });
 
-            // Initialize dropdown states based on current page
             document.addEventListener('DOMContentLoaded', function() {
-                // Set active states for dropdown parents
                 const activeSubLinks = document.querySelectorAll('.sidebar .nav-link.active-sub');
                 activeSubLinks.forEach(function(link) {
                     const parentCollapse = link.closest('.collapse');

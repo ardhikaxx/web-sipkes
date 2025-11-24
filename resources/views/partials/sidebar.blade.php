@@ -119,6 +119,11 @@
         transition: all 0.2s ease;
     }
 
+    .sidebar .nav-link:not(.active):not(.active-sub):hover {
+        background: rgba(85, 108, 255, 0.06);
+        color: #556cff;
+    }
+
     .sidebar .nav-link.active {
         background: linear-gradient(90deg, #4f7bff, #6ca7ff);
         color: #fff;
@@ -138,17 +143,13 @@
         transform: rotate(-180deg);
     }
 
-    .active-dot {
-        width: 6px;
-        height: 6px;
-        background: currentColor;
-        border-radius: 50%;
-        display: inline-block;
-    }
-
     .sidebar .collapse .nav-link {
         padding: .5rem .75rem;
         font-size: 0.9rem;
         margin-bottom: 0.1rem;
+    }
+
+    .sidebar .collapse .nav-link.active-sub {
+        border-left: 2px solid #556cff;
     }
 </style>
