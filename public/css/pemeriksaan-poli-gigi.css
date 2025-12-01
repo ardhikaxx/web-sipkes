@@ -17,17 +17,6 @@
     position: relative;
 }
 
-.stepper-steps::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #dee2e6;
-    z-index: 1;
-}
-
 .stepper-step {
     position: relative;
     z-index: 2;
